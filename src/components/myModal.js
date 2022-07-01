@@ -35,7 +35,12 @@ const Modal = ({ items }) => {
             <div class="modal-body">
               {items.map((item) => {
                 return (
-                  <div>
+                  <div className="text-muted">
+                    <img
+                      style={{ width: "100px" }}
+                      src={item.images[0]}
+                      alt={item.title}
+                    />
                     <h5>{item.title}</h5>
                     <p>{item.description}</p>
                   </div>
