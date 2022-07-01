@@ -4,6 +4,7 @@ import "./index.css";
 import Categories from "./Categories";
 import Menu from "./Menu";
 import items from "./data";
+import { Route } from "react-router-dom";
 
 const allCategories = ["All", ...new Set(items.map((item) => item.category))];
 
@@ -24,7 +25,6 @@ function App() {
         <div className="text-center">
           <h1 className="text-danger fw-bold border-bottom py-3">Our Menu</h1>
         </div>
-
         <Categories categories={categories} filterItems={filterItems} />
         <Menu items={menuItems} />
       </section>
